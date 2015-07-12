@@ -3,7 +3,7 @@ getTargetPowerData <- function() {
   
   ##Read all the data from the file with separator as ; and without factoring
   powerConsumption <- read.table("household_power_consumption.txt",header=TRUE,sep=";",quote="",  
-                                 stringsAsFactors=FALSE,comment.char="")
+                                 stringsAsFactors=FALSE,comment.char="", na.strings="?")
   ##Cast the Date data type
   powerConsumption$Date <-as.Date(powerConsumption$Date,format="%d/%m/%Y")
   
